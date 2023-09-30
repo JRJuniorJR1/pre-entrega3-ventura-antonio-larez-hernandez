@@ -35,6 +35,7 @@ h1 {
   font-size: 30px;
 }
 
+/* cards index */
 .card {
   max-width: 100%;
   transition: background-color 0.3s ease;
@@ -46,7 +47,7 @@ h1 {
   height: 300px;
 }
 .card:hover {
-  background-color: #ec98da;
+  background-color: #ffb0ee;
 }
 .card a {
   text-decoration: none;
@@ -93,6 +94,50 @@ h1 {
 }
 @media (min-width: 1844px) {
   .container-cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* cards productos*/
+.container-cards-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 520px) {
+  .container-cards-productos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 521px) and (max-width: 575px) {
+  .container-cards-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container-cards-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .container-cards-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .container-cards-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1244px) {
+  .container-cards-productos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1844px) {
+  .container-cards-productos {
     grid-template-columns: repeat(6, 1fr);
   }
 }

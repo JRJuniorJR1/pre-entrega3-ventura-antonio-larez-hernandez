@@ -1,5 +1,5 @@
 $color-pagina: #49013a;
-$color-select: #ec98da;
+$color-select: #ffb0ee;
 $color-link-product: black;
 $color-link-select-product: blue;
 $color-text-select: #ffffff;
@@ -47,6 +47,7 @@ h1 {
     font-size: 30px;
 }
 
+/* cards index */
 .card {
     max-width: 100%;
     transition: background-color 0.3s ease;
@@ -103,6 +104,44 @@ h1 {
         grid-template-columns: repeat(6, 1fr);
     }
 }
+
+/* cards productos*/
+.container-cards-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; // Centro horizontalmente
+    align-items: center;    // Centro verticalmente
+
+    @media (max-width: 520px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 521px) and (max-width: 575px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 1244px) {
+        grid-template-columns: repeat(5, 1fr); // Cambiado a 5 columnas para 15 productos
+    }
+
+    @media (min-width: 1844px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
 
 /* footer */
 
